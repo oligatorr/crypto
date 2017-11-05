@@ -3,6 +3,9 @@ import static java.lang.Math.*;
 public class Helper {
 	private Helper() {}
 	public static String bytesToHex(byte[] in) {
+		if (in == null) {
+			return "";
+		}
 	    final StringBuilder builder = new StringBuilder();
 	    for(byte b : in) {
 	        builder.append(String.format("%02x ", b));
